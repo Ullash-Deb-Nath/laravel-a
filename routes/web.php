@@ -5,6 +5,8 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\DepartmentController;
 use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\CourseController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -37,5 +39,13 @@ Route::post('employee/store', [EmployeeController::class, 'store']);
 Route::get('employee/all',[EmployeeController::class, 'all']);
 Route::get('employee/edit/{id}',[EmployeeController::class, 'edit']);
 Route::get('employee/update/{id}',[EmployeeController::class, 'update']);
+
+
+Route::get('course/create', [CourseController::class, 'create']);
+Route::post('course/store', [CourseController::class, 'store']);
+Route::get('course/all', [CourseController::class, 'all']);
+Route::get('course/edit/{id}', [CourseController::class, 'edit']);
+Route::post('course/update/{id}', [CourseController::class, 'update']);
+Route::get('course/delete/{id}', [CourseController::class, 'delete']);
 
 
