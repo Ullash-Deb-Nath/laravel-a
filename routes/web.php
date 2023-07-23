@@ -6,6 +6,7 @@ use App\Http\Controllers\NewsController;
 use App\Http\Controllers\DepartmentController;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\CourseController;
+use App\Http\Controllers\TeacherController;
 
 /*
 |--------------------------------------------------------------------------
@@ -48,4 +49,7 @@ Route::get('course/edit/{id}', [CourseController::class, 'edit']);
 Route::post('course/update/{id}', [CourseController::class, 'update']);
 Route::get('course/delete/{id}', [CourseController::class, 'delete']);
 
+
+
+Route::get('teacher/create', [TeacherController::class, 'create']);
 
